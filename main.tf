@@ -5,10 +5,21 @@
 * - Rule sets for one, two and three Intra VPC Security Group Rules should be the same. also enforced by validation
 * - See it in action in [security_group_rules.tf](https://github.com/JudeQuintana/terraform-main/blob/main/full_mesh_trio_demo/security_group_rules.tf) in the [Full Mesh Trio Demo](https://github.com/JudeQuintana/terraform-main/tree/main/full_mesh_trio_demo).
 *
+* `v1.0.1`:
+* - ipv4 secondary cidrs
 * ```
 * module "full_mesh_intra_vpc_security_groups_rules" {
-*  source  = "JudeQuintana/full-mesh-intra-vpc-security-group-rules/aws"
-*  version = "1.0.0"
+*   source  = "JudeQuintana/full-mesh-intra-vpc-security-group-rules/aws"
+*   version = "1.0.1"
+* ...
+* ```
+*
+* `v1.0.0`:
+* - ipv4 network cidrs
+* ```
+* module "full_mesh_intra_vpc_security_groups_rules" {
+*   source  = "JudeQuintana/full-mesh-intra-vpc-security-group-rules/aws"
+*   version = "1.0.0"
 *
 *   providers = {
 *     aws.one   = aws.use1
